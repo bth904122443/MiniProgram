@@ -4,7 +4,8 @@
     "pages/tpl/qq/qq",
     "pages/tpl/weixin/weixin",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/css/css"
   ],
   "window": {
     "backgroundTextStyle": "light",
