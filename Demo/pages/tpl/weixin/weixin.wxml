@@ -1,0 +1,5 @@
+<import src="../../../templates/message/message.wxml"></import>
+
+<template is='message' data="{{content:'我们一起打篮球吧',friend:'科比',time:'2020/10/10'}}">
+
+</template>

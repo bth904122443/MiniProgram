@@ -1,13 +1,28 @@
 {
-  "pages":[
+  "pages": [
+    "pages/event/event",
+    "pages/tpl/qq/qq",
+    "pages/tpl/weixin/weixin",
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/tpl/qq/qq",
+        "text": "qq"
+      },
+      {
+        "pagePath": "pages/tpl/weixin/weixin",
+        "text": "weixin"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
