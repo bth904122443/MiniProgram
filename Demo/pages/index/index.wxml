@@ -1,4 +1,31 @@
 <view class="container">
   <view class="blue-group">
+    <view class="top-group">
+      <view class="search-group">
+        <input class="search-input" placeholder-class="placeholder-input" placeholder="蚂蚁花呗"/>
+      </view>
+      <view class="more-group">
+        <image src="../images/通讯录.png"></image>
+        <image src="../images/添加.png"></image>
+      </view>
+    </view>
+    <view class="main-menu-group">
+      <view class="main-menu">
+        <image src="../images/扫一扫.png"></image>
+        <text>扫一扫</text>
+      </view>
+      <view class="main-menu">
+        <image src="../images/付钱.png"></image>
+        <text>付钱</text>
+      </view>
+      <view class="main-menu">
+        <image src="../images/收钱.png"></image>
+        <text>收钱</text>
+      </view>
+      <view class="main-menu">
+        <image src="../images/卡包.png"></image>
+        <text>卡包</text>
+      </view>
+    </view>
   </view>
 </view>

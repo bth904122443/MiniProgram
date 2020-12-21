@@ -1,21 +1,56 @@
-/**index.wxss**/
-.userinfo {
+.blue-group{
+  background: #1e82d2;
+  padding: 20rpx;
+}
+
+.blue-group .top-group{
+  height:58rpx;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.blue-group .main-menu-group{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.main-menu-group .main-menu{
+  width: 100rpx;
+  height: 120rpx;
+  text-align: center;
+}
+.main-menu-group .main-menu image{
+  height:70rpx;
+  width: 70rpx;
+}
+.main-menu-group .main-menu text{
+  font-size: 32rpx;
+  color: #fff;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.top-group .search-group{
+  flex: 1;
+  display: flex;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.search-group .search-input{
+  flex: 1;
+  background: #1a71b7;
+  border-radius: 4px;
+  padding: 0 10rpx;
+  font-size: 24rpx;
+}
+.search-input .placeholder-input{
+  color: #fff;
 }
 
-.usermotto {
-  margin-top: 200px;
+.top-group .more-group{
+  flex-basis: 180rpx;
+  display: flex;
+  justify-content: space-evenly;
 }
+
+.more-group image{
+  height: 50rpx;
+  width: 50rpx;
+}
+
