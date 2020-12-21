@@ -54,3 +54,27 @@
   width: 50rpx;
 }
 
+.white-group{
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 20rpx;
+}
+.white-group .menu-group{
+  width: 180rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+.white-group .menu-group image{
+  width: 54rpx;
+  height: 54rpx;
+}
+.white-group .menu-group text{
+  font-size: 32rpx;
+}
+
