@@ -1,4 +1,0 @@
-<view>
-  <text>我是一个banner</text>
-  <text>{{time}}</text>
-</view>

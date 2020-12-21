@@ -1,7 +1,0 @@
-<template name="message">
-  <view class="message-group">
-  <text class="content">{{content}}</text>
-  <text class="friend">{{friend}}</text>
-  <text class="time">{{time}}</text>
-</view>
-</template>

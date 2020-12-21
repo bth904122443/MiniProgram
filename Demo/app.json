@@ -1,29 +1,12 @@
 {
   "pages": [
-    "pages/event/event",
-    "pages/tpl/qq/qq",
-    "pages/tpl/weixin/weixin",
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/css/css"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#108ee9",
+    "navigationBarTitleText": "支付宝",
     "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/tpl/qq/qq",
-        "text": "qq"
-      },
-      {
-        "pagePath": "pages/tpl/weixin/weixin",
-        "text": "weixin"
-      }
-    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

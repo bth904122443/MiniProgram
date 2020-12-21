@@ -1,9 +1,0 @@
-<!--pages/event/event.wxml-->
-<view class='article-group' wx:for="{{articles}}" bindtap="onArticleClick">
-  {{item.title}}
-</view>
-
-<view class="outterView" bindtap="onOutterViewClick">
-  <view class="innerView" bindtap="onInnerViewClick">
-  </view>
-</view>
