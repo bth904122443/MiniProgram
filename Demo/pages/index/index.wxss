@@ -43,3 +43,16 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+.rate-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  color: #ccc;
+  margin-top: 5rpx;
+}
+.rate-group image{
+  width: 20rpx;
+  height: 20rpx;
+}

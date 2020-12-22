@@ -11,6 +11,12 @@
           <image class="thumbnail" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2626959989.webp"></image>
         </view>
         <view class="item-title">神奇女侠19841111</view>
+        <view class="rate-group">
+          <image wx:for="{{[1,2,3]}}" src="/pages/images/一颗星.png"></image>
+          <image src="/pages/images/半颗星.png"></image>
+          <image src="/pages/images/空星.png"></image>
+          <text>8.0</text>
+        </view>
       </view>
     </navigator>
     <navigator class="item-navigator">
