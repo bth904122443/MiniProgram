@@ -7,6 +7,18 @@ Component({
     rate:{
       type:Number,
       value:''
+    },
+    starsize:{
+      type:Number,
+      value:''
+    },
+    fontsize:{
+      type:Number,
+      value:20 //rpx
+    },
+    fontcolor:{
+      type:String,
+      value:"#ccc"
     }
   },
 
@@ -26,12 +38,31 @@ Component({
 
   lifetimes:{
     attached:function(){
-      var that = this
-      var rate = that.properties.rate
-      var inRate = parseInt(rate)
-      var light = parseInt(inRate/2)
-      var half = inRate%2
-      var gray = 5 - light - half
+      var that = this;
+      var rate = that.properties.rate;
+      var inRate = parseInt(rate);
+      var light = parseInt(inRate/2);
+      var half = inRate%2;
+      var gray = 5 - light - half;
+      var lights = [];
+      var halfs = [];
+      var grays = [];
+      for(var index=1; index<=light; index++){
+        lights.push(index);
+      };
+      for(var index=1; index<=half; index++){
+        halfs.push(index)
+      };
+      for(var index=1; index<=gray; index++){
+        grays.push(index)
+      };
+      var ratetext = rate && rate > 0 ? rate.toFixed(1) : "未评分"
+      that.setData({
+        grays:grays,
+        halfs:halfs,
+        lights:lights,
+        ratetext:ratetext
+      });
     }
   }
 })

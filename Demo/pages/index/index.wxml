@@ -5,10 +5,10 @@
     <navigator class="module-more">更多</navigator>
   </view>
   <scroll-view class="module-scroll-view" scroll-x="{{true}}">
-    <navigator class="item-navigator">
+    <navigator wx:for="{{movies}}" wx:key="{{item.title}}" class="item-navigator">
       <view class="item-group">
         <view class="thumbnail-group">
-          <image class="thumbnail" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2626959989.webp"></image>
+          <image class="thumbnail" src="{{item.thumbnail_pic_s}}"></image>
         </view>
         <view class="item-title">神奇女侠19841111</view>
         <stars rate="8"></stars>

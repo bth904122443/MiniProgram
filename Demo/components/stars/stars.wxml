@@ -1,6 +1,6 @@
 <view class="rate-group">
-  <image wx:for="{{[1,2,3]}}" wx:key="*this" src="/pages/images/一颗星.png"></image>
-  <image src="/pages/images/半颗星.png"></image>
-  <image src="/pages/images/空星.png"></image>
-  <text>8.0</text>
+  <image wx:for="{{lights}}" style="width:{{starsize}}rpx;height:{{starsize}}rpx" wx:key="*this" src="/pages/images/一颗星.png"></image>
+  <image wx:for="{{halfs}}" wx:key="*this" src="/pages/images/半颗星.png"></image>
+  <image wx:for="{{grays}}" wx:key="*this" src="/pages/images/空星.png"></image>
+  <text style="font-size:{{fontsize}}rpx;color:{{fontcolor}}">{{ratetext}}</text>
 </view>

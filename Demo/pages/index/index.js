@@ -11,7 +11,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var that = this;
+    wx.request({
+      url: 'http://v.juhe.cn/toutiao/index?count=7',
+      data:{
+        key:"27aabc39c500f115697bb5009076c0a2",
+      },
+      success:function(res){
+        var movies = res.data.result.data
+        that.setData({
+          movies:movies
+        })
+      }
+    })
   },
 
   /**
