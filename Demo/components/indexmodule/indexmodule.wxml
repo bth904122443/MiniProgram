@@ -1,0 +1,17 @@
+<view class="module-group">
+  <view class="module-top">
+    <view class="module-tile">{{title}}</view>
+    <navigator class="module-more">{{moreurl}}</navigator>
+  </view>
+  <scroll-view class="module-scroll-view" scroll-x="{{true}}">
+    <navigator wx:for="{{items}}" wx:key="title" class="item-navigator">
+      <view class="item-group">
+        <view class="thumbnail-group">
+          <image class="thumbnail" src="{{item.thumbnail_pic_s}}"></image>
+        </view>
+        <view class="item-title">{{item.title}}</view>
+        <stars rate="{{rate}}"></stars>
+      </view>
+    </navigator>
+  </scroll-view>
+</view>

@@ -4,16 +4,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    rate:8
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (options){
     var that = this;
+    // 电影数据
     wx.request({
-      url: 'http://v.juhe.cn/toutiao/index?count=7',
+      url: 'http://v.juhe.cn/toutiao/index',
       data:{
         key:"27aabc39c500f115697bb5009076c0a2",
       },
@@ -21,6 +22,32 @@ Page({
         var movies = res.data.result.data
         that.setData({
           movies:movies
+        })
+      }
+    }),
+    // 电视剧
+    wx.request({
+      url: 'http://v.juhe.cn/toutiao/index',
+      data:{
+        key:"27aabc39c500f115697bb5009076c0a2",
+      },
+      success:function(res){
+        var tvs = res.data.result.data
+        that.setData({
+          tvs:tvs
+        })
+      }
+    }),
+    // 综艺
+    wx.request({
+      url: 'http://v.juhe.cn/toutiao/index',
+      data:{
+        key:"27aabc39c500f115697bb5009076c0a2",
+      },
+      success:function(res){
+        var shows = res.data.result.data
+        that.setData({
+          shows:shows
         })
       }
     })
