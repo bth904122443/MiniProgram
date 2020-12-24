@@ -1,3 +1,4 @@
+import {network} from "network.js"
 Page({
 
   /**
@@ -12,40 +13,23 @@ Page({
    */
   onLoad: function (options){
     var that = this;
-    // 电影数据
-    wx.request({
-      url: 'http://v.juhe.cn/toutiao/index',
-      data:{
-        key:"27aabc39c500f115697bb5009076c0a2",
-      },
-      success:function(res){
-        var movies = res.data.result.data
+    // 电影
+    network.getMovieList({
+      success:function(movies){
         that.setData({
           movies:movies
         })
       }
     }),
-    // 电视剧
-    wx.request({
-      url: 'http://v.juhe.cn/toutiao/index',
-      data:{
-        key:"27aabc39c500f115697bb5009076c0a2",
-      },
-      success:function(res){
-        var tvs = res.data.result.data
+    network.getTVList({
+      success:function(tvs){
         that.setData({
           tvs:tvs
         })
       }
     }),
-    // 综艺
-    wx.request({
-      url: 'http://v.juhe.cn/toutiao/index',
-      data:{
-        key:"27aabc39c500f115697bb5009076c0a2",
-      },
-      success:function(res){
-        var shows = res.data.result.data
+    network.getShowList({
+      success:function(shows){
         that.setData({
           shows:shows
         })

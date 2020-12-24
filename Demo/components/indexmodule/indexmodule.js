@@ -7,7 +7,8 @@ Component({
     title:{
       type:String,
       value:''
-    },moreurl:{
+    },
+    moreurl:{
       type:String,
       value:''
     },
@@ -21,7 +22,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    rate:8
   },
 
   /**
