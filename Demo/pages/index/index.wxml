@@ -1,4 +1,9 @@
 <searchbar isnavigator='{{true}}'></searchbar>
-<indexmodule title='电影' moreurl="更多" items='{{movies}}'></indexmodule>
-<indexmodule title='电视剧' moreurl="更多" items='{{tvs}}'></indexmodule>
-<indexmodule title='综艺' moreurl="更多" items='{{shows}}'></indexmodule>
+<!-- 电影 -->
+<indexmodule title='电影' moreurl="/pages/list/list?type=movie" items='{{movies}}'></indexmodule>
+
+<!-- 电视剧 -->
+<indexmodule title='电视剧' moreurl="/pages/list/list?type=tv" items='{{tvs}}'></indexmodule>
+
+<!-- 综艺 -->
+<indexmodule title='综艺' moreurl="/pages/list/list?type=show" items='{{shows}}'></indexmodule>

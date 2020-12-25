@@ -2,7 +2,7 @@
   <view class="item-group">
     <view class="thumbnail-group">
       <image class="thumbnail" src="{{item.thumbnail_pic_s}}"></image>
-      <view class="item-title">{{items.title}}</view>
+      <view class="item-title">{{item.title}}</view>
       <stars rate="{{rate}}"></stars>
     </view>
   </view>
