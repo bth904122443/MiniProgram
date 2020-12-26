@@ -21,7 +21,6 @@ Component({
       value:"#ccc"
     }
   },
-
   /**
    * 组件的初始数据
    */

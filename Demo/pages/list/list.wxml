@@ -1,5 +1,5 @@
 <searchbar></searchbar>
 
 <view class="container">
-  <itemview wx:for="{{items}}" wx:key="item.title" item="{{item}}"></itemview>
+  <itemview wx:for="{{items}}" wx:key="title" item="{{item}}"></itemview>
 </view>

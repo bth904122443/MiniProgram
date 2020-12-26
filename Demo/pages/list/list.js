@@ -16,6 +16,10 @@ Page({
     var that = this
     var type = options.type;
     var title = "";
+    // 页面loading
+    wx.showLoading({
+      title: '正在加载中...',
+    })
     if(type === "movie"){
       //请求电影数据
       network.getMovieList({
@@ -23,10 +27,10 @@ Page({
           that.setData({
             items:items
           })
+          wx.hideLoading()
         },
         count:100
       })
-      console.log(network.getMovieList)
     }else if(type === "tv"){
       //请求电视剧数据
       network.getTvList({
@@ -34,6 +38,7 @@ Page({
           that.setData({
             items:items
           })
+          wx.hideLoading()
         },
         count:100
       })
@@ -44,6 +49,7 @@ Page({
           that.setData({
             items:items
           })
+          wx.hideLoading()
         },
         count:100
       })

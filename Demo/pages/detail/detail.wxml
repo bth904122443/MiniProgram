@@ -1,0 +1,49 @@
+<view class="item-header">
+  <view class="item-title">海王 Aquaman(2018)</view>
+  <view class="item-detail">
+    <view class="left-detail">
+      <view class="item-rate">
+        <stars rate="8" starsize='28'></stars>
+        <text class="comment-persons">203894人评价</text>
+      </view>
+      <view class="item-sub-rate">
+        <view class="item-type">
+          143分钟 动作/奇幻/冒险
+        </view>
+        <view class="item-show">
+          2018-12-03 (中国大陆) 上映 美国
+        </view>
+        <view class="item-actors">
+          温子仁(导演) / 杰森·莫玛 / 艾梅柏·希尔德 / 威廉·达福
+        </view>
+      </view>
+    </view>
+    <view class="right-detail">
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20181215%2F56030669a0dc48ecabc5f57fec548174.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611557256&t=ead56e76d39387a2601fbd5e30d00be9"></image>
+    </view>
+  </view>
+</view>
+
+<view class="item-tags">
+  <view class="item-tags-title">豆瓣成员常用标签</view>
+  <view class="item-tags-list">
+    <text>黑色幽默</text><text>小人物</text><text>戏剧</text><text>方言</text><text>中国大陆</text><text>人性</text><text>剧情</text>
+  </view>
+</view>
+
+<view class="comment-list-group">
+  <view class="comment-title">短评(2903984)</view>
+  <view class="comment-group">
+    <view class="left-comment">
+      <image class="avatar" src="https://img1.doubanio.com/icon/u1005928-127.jpg"></image>
+      <view class="right-comment">
+        <view class="username-rate">
+          <text class="username">羚锐</text>
+          <stars rate="5"></stars>
+        </view>
+        <view class="relese-time">2018-12-03 12:22:22</view>
+        <view class="content">海底世界戏份多到超出想象，这是一部主打海洋英雄的片应有的样子，一本满足。撒哈拉沙漠、西西里岛、海沟族追逐戏、地心藏海…奔波全球海洋奇观，上天入地，美不胜收。温子仁手下的DC，不再暗黑，情节跌宕又完整，正如他的恐怖片一样吸人，吸入深海底。亚特兰蒂斯与亚瑟的历史传说，完美融入超级英雄剧情，陆地之子抑或海洋之王，海王不止粗汉也有柔情，三叉戟秒变金箍棒，这不就是《西游记之大闹龙宫》？红发女主的造型很美，特别是水母服。“海洋的世界里没有眼泪” 几十年的灯塔守护直接戳泪，爱一个人不就是这样的无私与痴情？2018最佳娱乐大赏，《狮子王》版《海底总动员》，《黑暗骑士》后最好的DC院线片。</view>
+      </view>
+    </view>
+  </view>
+</view>
