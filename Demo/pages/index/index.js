@@ -21,7 +21,7 @@ Page({
         })
       }
     }),
-    network.getTVList({
+    network.getTvList({
       success:function(tvs){
         that.setData({
           tvs:tvs

@@ -1,5 +1,5 @@
 // pages/list/list.js
-import {network} from "../../utils/network.js"
+import {network} from "../../utils/network"
 Page({
 
   /**
@@ -15,6 +15,7 @@ Page({
   onLoad: function (options) {
     var that = this
     var type = options.type;
+    var title = "";
     if(type === "movie"){
       //请求电影数据
       network.getMovieList({
@@ -25,6 +26,7 @@ Page({
         },
         count:100
       })
+      console.log(network.getMovieList)
     }else if(type === "tv"){
       //请求电视剧数据
       network.getTvList({
