@@ -41,6 +41,28 @@ const network = {
   getShowList:function(params){
     params.type = "show";
     this.getItemList(params);
+  },
+  
+  getItemDetail:function(params){
+    var type = params.type;
+    var id = params.id;
+    var url = '';
+    if(type === 'movie'){
+      url:globalUrls.movieDetail + id;
+    }else if(type === 'tv'){
+      url:globalUrls.tvDetail + id;
+    }else if(type === 'show'){
+      url:globalUrls.showDetail + id;
+    }
+    wx.request({
+      url: url,
+      success:function(res){
+        var item = res.data
+        if(params.success){
+          params.success(item);
+        }
+      }
+    })
   }
 }
 

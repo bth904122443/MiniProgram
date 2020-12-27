@@ -15,6 +15,9 @@ Page({
   onLoad: function (options) {
     var that = this
     var type = options.type;
+    that.setData({
+      type:type
+    })
     var title = "";
     // 页面loading
     wx.showLoading({
