@@ -1,9 +1,9 @@
 <searchbar isnavigator='{{true}}'></searchbar>
 <!-- 电影 -->
-<indexmodule title='电影' moreurl="/pages/list/list?type=movie" items='{{movies}}' type='movie'></indexmodule>
+<indexmodule title='电影' moreurl="/pages/list/list?type=movie" items='{{top}}' type='top'></indexmodule>
 
 <!-- 电视剧 -->
-<indexmodule title='电视剧' moreurl="/pages/list/list?type=tv" items='{{tvs}}' type='tv'></indexmodule>
+<indexmodule title='电视剧' moreurl="/pages/list/list?type=tv" items='{{shehui}}' type='shehui'></indexmodule>
 
 <!-- 综艺 -->
-<indexmodule title='综艺' moreurl="/pages/list/list?type=show" items='{{shows}}' type='show'></indexmodule>
+<indexmodule title='综艺' moreurl="/pages/list/list?type=show" items='{{guonei}}' type='guonei'></indexmodule>

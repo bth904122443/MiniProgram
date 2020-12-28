@@ -15,23 +15,23 @@ Page({
     var that = this;
     // 电影
     network.getMovieList({
-      success:function(movies){
+      success:function(top){
         that.setData({
-          movies:movies
+          top:top
         })
       }
     }),
     network.getTvList({
-      success:function(tvs){   
+      success:function(shehui){   
         that.setData({
-          tvs:tvs
+          shehui:shehui
         })
       }
     }),
     network.getShowList({
-      success:function(shows){
+      success:function(guonei){
         that.setData({
-          shows:shows
+          guonei:guonei
         })
       }
     })
@@ -62,7 +62,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    
   },
 
   /**

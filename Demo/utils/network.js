@@ -3,11 +3,11 @@ import {globalUrls} from "urls.js"
 const network = {
   getItemList:function(params){
     var url = "";
-    if(params.type === "movie"){
+    if(params.type === "top"){
       url = globalUrls.movieList;
-    }else if(params.type === "tv"){
+    }else if(params.type === "shehui"){
       url = globalUrls.tvList;
-    }else if(params.type === "show"){
+    }else if(params.type === "guonei"){
       url = globalUrls.showList;
     }
     var count = params.count?params.count:7;
@@ -31,15 +31,15 @@ const network = {
     })
   },
   getMovieList:function(params){
-    params.type = "movie";
+    params.type = "top";
     this.getItemList(params);
   },
   getTvList:function(params){
-    params.type = "tv";
+    params.type = "shehui";
     this.getItemList(params);
   },
   getShowList:function(params){
-    params.type = "show";
+    params.type = "guonei";
     this.getItemList(params);
   },
   
@@ -47,11 +47,11 @@ const network = {
     var type = params.type;
     var id = params.id;
     var url = '';
-    if(type === 'movie'){
+    if(type === 'top'){
       url:globalUrls.movieDetail + id;
-    }else if(type === 'tv'){
+    }else if(type === 'shehui'){
       url:globalUrls.tvDetail + id;
-    }else if(type === 'show'){
+    }else if(type === 'guonei'){
       url:globalUrls.showDetail + id;
     }
     wx.request({
