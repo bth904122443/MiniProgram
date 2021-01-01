@@ -1,32 +1,18 @@
-// pages/detail/detail.js
-import {network} from '../../utils/network.js'
-
-
+// pages/comment/comment.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    tatal:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    var type = options.type
-    var id = options.id
-    network.getItemDetail({
-      type:type,
-      id:id,
-      success:function(item){
-        that.setData({
-          item:item
-        })
-      }
-    })
+
   },
 
   /**
@@ -40,9 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx.pageScrollTo({
-      scrollTop: 0,
-    })
+
   },
 
   /**

@@ -1,0 +1,15 @@
+<view class="comment-list-group">
+  <view class="comment-group"> 
+    <view class="left-comment">
+      <image class="avatar" src="https://img1.doubanio.com/icon/u1005928-127.jpg"></image>
+    </view>
+    <view class="right-comment">
+      <view class="username-rate">
+        <text class="username">羚锐</text>
+        <stars rate="5" starsize='28' istext="false"></stars>
+      </view>
+      <view class="release-time">2018-12-03 12:22:22</view>
+      <view class="content">海底世界戏份多到超出想象，这是一部主打海洋英雄的片应有的样子，一本满足。撒哈拉沙漠、西西里岛、海沟族追逐戏、地心藏海…奔波全球海洋奇观，上天入地，美不胜收。温子仁手下的DC，不再暗黑，情节跌宕又完整，正如他的恐怖片一样吸人，吸入深海底。亚特兰蒂斯与亚瑟的历史传说，完美融入超级英雄剧情，陆地之子抑或海洋之王，海王不止粗汉也有柔情，三叉戟秒变金箍棒，这不就是《西游记之大闹龙宫》？红发女主的造型很美，特别是水母服。“海洋的世界里没有眼泪” 几十年的灯塔守护直接戳泪，爱一个人不就是这样的无私与痴情？2018最佳娱乐大赏，《狮子王》版《海底总动员》，《黑暗骑士》后最好的DC院线片。</view>
+    </view>
+  </view>
+</view>
