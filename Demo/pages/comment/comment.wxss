@@ -28,3 +28,13 @@
   margin-top: 60rpx;
   font-size: 40rpx;
 }
+
+.page-btn-group{
+  padding: 60rpx 40rpx;
+  display: flex;
+  flex: 1;
+}
+.page-btn-group .page-btn{
+  border: 1rpx solid #ccc;
+  border-radius: 20rpx;
+}

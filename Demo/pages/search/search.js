@@ -1,4 +1,6 @@
 // pages/search/search.js
+import {network} from "../../utils/network";
+
 Page({
 
   /**
@@ -15,6 +17,21 @@ Page({
 
   },
 
+  onSearchInputEvent:function(event){
+    var that = this;
+    var value = event.detail.value;
+    network.getSearch({
+      q:value,
+      success:function(subjects){
+        subjects:subjects
+      }
+    })
+  },
+  onItemTapEvent:function(event){
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -63,7 +63,21 @@ const network = {
         }
       }
     })
+  },
+  getSearch:function(params){
+    var q = params.q
+    var url = globalUrls.searchUrl(q)
+    wx.request({
+      url: url,
+      success:function(res){
+        var subjects = res.data.subjucts;
+        if(params.success){
+          params.success(subjucts);
+        }
+      }
+    })
   }
+
 }
 
 export{network}

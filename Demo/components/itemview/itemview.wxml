@@ -1,9 +1,8 @@
 <navigator class="item-navigator" url='{{itemurl}}'>
   <view class="item-group">
     <view class="thumbnail-group">
-      <image class="thumbnail" src="https://bkimg.cdn.bcebos.com/pic/9e3df8dcd100baa1417742e44f10b912c8fc2e11?x-bce-process=image/resize,m_fill,w_82,h_102,align_50,limit_0"></image>
+      <image class="thumbnail" src="{{item.thumbnail_pic_s}}"></image>
       <view class="item-title">{{item.title}}</view>
-      <!-- <image class="thumbnail" src="{{item.thumbnail_pic_s}}"></image> -->
       <stars rate="{{rate}}"></stars>
     </view>
   </view>
