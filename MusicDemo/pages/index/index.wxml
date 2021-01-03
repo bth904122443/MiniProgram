@@ -45,5 +45,27 @@
         <text class="more">查看更多</text> 
       </view>
     </view>
+    <scroll-view class="recommendScroll" enable-flex="true" scroll-x="true">
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg"></image>
+      <text>这里是文本内容，这里是文本内容</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg"></image>
+      <text>这里是文本内容，这里是文本内容</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg"></image>
+      <text>这里是文本内容，这里是文本内容</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg"></image>
+      <text>这里是文本内容，这里是文本内容</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nvshen.jpg"></image>
+      <text>这里是文本内容，这里是文本内容</text>
+    </view>
+  </scroll-view>
   </view>
 </view>
