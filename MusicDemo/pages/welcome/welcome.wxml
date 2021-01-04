@@ -1,6 +1,9 @@
 
 <view class="container">
-  <image class="avatar" src="/images/avatar.jpg"></image>
+  <!-- 使用lin-ui组件重构头像部分 -->
+  <l-avatar class="l-avatar" open-data="{{['userAvatarUrl','userNickName']}}" placement="bottom" size="160">
+  </l-avatar>
+  <!-- <image class="avatar" src="/images/avatar.jpg"></image> -->
   <text class="motto">你好，王多鱼</text>
   <view class="journey-container">
     <text class="journey">开启小程序之旅</text>
