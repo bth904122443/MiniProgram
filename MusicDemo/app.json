@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/welcome/welcome"
+    "pages/welcome/welcome",
+    "pages/posts/posts"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#b3d4db",
+    "navigationBarBackgroundColor": "#C22A1E",
     "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },

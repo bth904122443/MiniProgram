@@ -1,0 +1,35 @@
+<view>
+  <swiper indicator-dots autoplay>
+    <swiper-item>
+      <image src="/images/banner-1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/banner-2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/banner-3.jpg"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 文章列表部分 -->
+  <view class="post-container">
+    <view class="post-author-date">
+      <image class="post-author" src="/images/article-1.jpg"></image>
+      <text class="post-date">Nov 18 2020</text>
+    </view>
+
+    <text class="post-title">2020LPL夏季赛观后感</text>
+
+    <image src="/images/article-2.jpg"></image>
+
+    <text>8月9好，LPL常规赛收官之战结束，在使馆赛后赛伦茨的比赛中关键对局中，SN战胜了FPX，为本赛季常规赛画上句号</text>
+
+    <view>
+      <image src="/images/chat.png"></image>
+      <text>92</text>
+      <image src="/images/view.png"></image>
+      <text>102</text>
+    </view>
+
+  </view>
+</view>
