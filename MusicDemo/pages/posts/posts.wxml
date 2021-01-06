@@ -12,24 +12,23 @@
   </swiper>
 
   <!-- 文章列表部分 -->
+  <block wx:for="{{posts}}">
   <view class="post-container">
     <view class="post-author-date">
-      <image class="post-author" src="/images/article-1.jpg"></image>
-      <text class="post-date">Nov 18 2020</text>
+      <image class="post-author" src="{{item.avatar}}"></image>
+      <text class="post-date">{{item.date}}</text>
     </view>
-
-    <text class="post-title">2020LPL夏季赛观后感</text>
-
-    <image src="/images/article-2.jpg"></image>
-
-    <text>8月9好，LPL常规赛收官之战结束，在使馆赛后赛伦茨的比赛中关键对局中，SN战胜了FPX，为本赛季常规赛画上句号</text>
-
-    <view>
-      <image src="/images/chat.png"></image>
-      <text>92</text>
-      <image src="/images/view.png"></image>
-      <text>102</text>
+    <text class="post-title">{{item.title}}</text>
+    <image class="post-image" src="{{item.headImgSrc}}"></image>
+    <text class="post-content">{{item.content}}</text>
+    <view class="post-like">
+      <!-- <image class="post-like-image" src="/images/chat.png"></image> -->
+      <l-icon class="post-like-image" name="favor" color="#666" size="28"></l-icon>
+      <text class="post-like-font">{{item.collection}}</text>
+      <!-- <image class="post-like-image" src="/images/view.png"></image> -->
+      <l-icon class="post-like-image" name="eye" color="#666" size="28"></l-icon>
+      <text class="post-like-font">{{item.reading}}</text>
     </view>
-
   </view>
+</block>
 </view>
