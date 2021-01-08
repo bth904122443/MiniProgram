@@ -12,8 +12,8 @@
   </swiper>
 
   <!-- 文章列表部分 -->
-<block wx:for="{{postList}}">
-  <view class="post-container">
+<block wx:for="{{postList}}" wx:key="index">
+  <view class="post-container" bind:tap="onGoToDetail" data-post-id="{{item.postId}}">
     <view class="post-author-date">
       <image class="post-author" src="{{item.avatar}}"></image>
       <text class="post-date">{{item.date}}</text>

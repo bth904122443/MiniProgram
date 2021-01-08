@@ -1,15 +1,18 @@
 <view class="container">
-  <image src="/images/article-1.jpg" class="head-image"></image>
+  <image src="{{postData.headImgSrc}}" class="head-image"></image>
   <view class="author-data">
-    <image src="/images/avatar.jpg" class="avatar"></image>
-    <text class="author">Charon</text>
+    <image src="{{postData.avatar}}" class="avatar"></image>
+    <text class="author">{{postData.author}}</text>
     <text class="const-text">发表于</text>
-    <text class="date">16小时前</text>
+    <text class="date">{{postData.dateTime}}</text>
   </view>
-  <text>LPL夏季赛最佳阵容</text>
-  <view>
-    <image src="/images/icon/collection.png"></image>
-    <image src="/images/icon/share.png"></image>
+  <text class="title">{{postData.title}}</text>
+  <view class="tool">
+    <view class="circle">
+      <image class="share-img" src="/images/icon/collection.png"></image>
+      <image src="/images/icon/share.png"></image>
+    </view>
+    <view class="horizon"></view>
   </view>
-  <text>8月9号，LPL常规赛收官之战结束</text>
+  <text class="detail">{{postData.detail}}</text>
 </view>

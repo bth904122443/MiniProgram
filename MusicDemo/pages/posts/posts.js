@@ -9,12 +9,27 @@ Page({
   data: {
 
   },
-
+  // 列表跳转首页
+  onGoToDetail(event){
+    // console.log(event);
+    // console.log(event.currentTarget.dataset.postId)
+    const pid = event.currentTarget.dataset.postId
+    wx.navigateTo({
+      url: '/pages/post-detail/post-detail?pid=' + pid,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
+    // wx.setStorageSync('flag', true)
+    // wx.setStorageSync('flag', false)
+    // wx.removeStorageSync('flag')
+    // wx.setStorageSync('flag1', 1)
+    // wx.clearStorageSync()
+    // const flag = wx.getStorageSync('flag')
+
     this.setData({
       postList
     })
