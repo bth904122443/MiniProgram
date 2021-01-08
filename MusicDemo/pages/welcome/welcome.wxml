@@ -5,7 +5,7 @@
   </l-avatar>
   <!-- <image class="avatar" src="/images/avatar.jpg"></image> -->
   <text class="motto">你好，王多鱼</text>
-  <view class="journey-container">
+  <view class="journey-container" bind:tap="onTap">
     <text class="journey">开启小程序之旅</text>
   </view>
 </view>

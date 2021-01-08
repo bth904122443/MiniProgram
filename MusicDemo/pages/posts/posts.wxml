@@ -12,7 +12,7 @@
   </swiper>
 
   <!-- 文章列表部分 -->
-  <block wx:for="{{posts}}">
+<block wx:for="{{postList}}">
   <view class="post-container">
     <view class="post-author-date">
       <image class="post-author" src="{{item.avatar}}"></image>
