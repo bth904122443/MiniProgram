@@ -9,7 +9,7 @@ var postList = [{
   date:"Nov 20 2020",
   reading:102,
   collection:92,
-  postId:1,
+  postId:0,
 },
 {
   title:"2020LPL夏季赛观后感",
@@ -22,7 +22,7 @@ var postList = [{
   date:"Nov 20 2020",
   reading:102,
   collection:92,
-  postId:2,
+  postId:1,
 }];
 
 export {postList}

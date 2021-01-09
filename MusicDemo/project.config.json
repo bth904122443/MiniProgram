@@ -68,6 +68,7 @@
         {
           "name": "pages/post-detail/post-detail",
           "pathName": "pages/post-detail/post-detail",
+          "query": "pid=1",
           "scene": null
         }
       ]
