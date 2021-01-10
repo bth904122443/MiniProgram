@@ -1,6 +1,6 @@
 // pages/post-detail/post-detail.js
 import {postList} from "../../data/data.js"
-
+const app = getApp()
 
 Page({
 
@@ -12,9 +12,12 @@ Page({
     postData:{},
     // 文章收藏状态
     collected:false,
+    // 播放状态
+    isPlaying:false,
     // 非数据绑定数据
     _pid:null,
-    _postsCollected:{}
+    _postsCollected:{},
+    _mgr:null
   },
   // postData文章数据
   // postsCollected文章收藏状态
@@ -37,11 +40,44 @@ Page({
     const collected = postsCollected[this.data._pid]
     this.setData({
       postData,
-      collected
+      collected,
+      isPlaying:this.currentMusicIsPlaying(),
     })
+    const mgr = wx.getBackgroundAudioManager()
+    this.data._mgr = mgr
+    mgr.onPlay(this.onMusicStart)
+    mgr.onPause(this.onMusicStop)
+  },
+  currentMusicIsPlaying(){
+    if(app.gIsPlaying && app.gIsPlayingPostId === this.data._pid){
+      return true
+    }
+    return false
   },
 
-  onCollect(event){
+  onMusicStart(event){
+    const mgr = this.data._mgr
+    const music = postList[this.data._pid].music
+    mgr.src = music.url
+    mgr.title = music.title
+    mgr.coverImgUrl = music.coverImg
+    this.setData({
+      isPlaying:true
+    })
+    app.gIsPlayingMusic = true
+    app.gIsPlayPostId = this.data._pid
+  },
+  onMusicStop(){
+    const mgr = this.data._mgr
+    mgr.stop()
+    this.setData({
+      isPlaying:false
+    })
+    app.gIsPlayingMusic = false
+    app.gIsPlayPostId = -1
+  },
+
+  async onCollect(event){
     // 假设当前文章未收藏
     // 哪篇文章被收藏
     // 数据结构 多篇文章是否被收藏
@@ -54,9 +90,16 @@ Page({
     })
     // 保存数据至缓存
     wx.setStorageSync('posts_collected',postsCollected)
+    // 收藏状态结果提示
     wx.showToast({
       title:this.data.collected?"收藏成功":"取消收藏",
-      duration:3000
+      duration:1000
+    })
+  },
+
+  onShare(event){
+    wx.showActionSheet({
+      itemList: ["分享到QQ","分享到微信","分享到朋友圈"],
     })
   },
   /**
