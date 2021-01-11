@@ -1,13 +1,14 @@
 <view>
+<post/>
   <swiper indicator-dots autoplay>
     <swiper-item>
-      <image src="/images/banner-1.jpg"></image>
+      <image data-post-id="0" bind:tap="onGoToDetail" src="/images/article-1.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/banner-2.jpg"></image>
+      <image data-post-id="1" bind:tap="onGoToDetail" src="/images/article-2.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/banner-3.jpg"></image>
+      <image data-post-id="2" bind:tap="onGoToDetail" src="/images/article-3.jpg"></image>
     </swiper-item>
   </swiper>
 
