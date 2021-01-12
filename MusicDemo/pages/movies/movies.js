@@ -5,14 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    inTheaters:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const that = this
+    wx.request({
+      url: 'http://t.talelin.com/v2/movie/in_theaters?count=3&start=0',
+      success(res){
+        console.log(res)
+        that.setData({
+          inTheaters:res.data.subjects
+        })
+      }
+    })
   },
 
   /**

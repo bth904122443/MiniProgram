@@ -1,1 +1,9 @@
-这是一个电影
+{{item}}
+<view class="container">
+  <image class="poster" src="{{item.images.large}}"></image>
+  <text class="title">{{item.title}}</text>
+  <view class="rate-container">
+    <l-rate disabled="{{true}}" score="{{item.rating.average}}" size="22" count="5"/>
+    <text class="score">{{item.rating.average}}</text>
+  </view>
+</view>
