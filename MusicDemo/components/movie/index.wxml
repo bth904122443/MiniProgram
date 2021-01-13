@@ -1,9 +1,8 @@
-{{item}}
 <view class="container">
-  <image class="poster" src="{{item.images.large}}"></image>
-  <text class="title">{{item.title}}</text>
+  <image class="poster" src="{{movie.images.large}}"></image>
+  <text class="title">{{movie.title}}</text>
   <view class="rate-container">
-    <l-rate disabled="{{true}}" score="{{item.rating.average}}" size="22" count="5"/>
-    <text class="score">{{item.rating.average}}</text>
+    <l-rate disabled="{{true}}" score="{{movie.rating.average/2}}" size="22" count="5"/>
+    <text class="score">{{movie.rating.average}}</text>
   </view>
 </view>

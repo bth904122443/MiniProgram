@@ -12,6 +12,6 @@
   </swiper>
   <!-- 文章列表部分 -->
   <block wx:for="{{postList}}" wx:key="index">
-    <post res="{{item}}"/>
+    <post res="{{item}}" bind:tap="onGoToDetail" data-post-id="{{item.postId}}"/>
   </block>
 </view>

@@ -7,11 +7,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    postList : {},
   },
   // 列表跳转首页
   onGoToDetail(event){
-    // console.log(event);
+    console.log(event);
     // console.log(event.currentTarget.dataset.postId)
     const pid = event.currentTarget.dataset.postId
     wx.navigateTo({
@@ -29,10 +29,11 @@ Page({
     // wx.setStorageSync('flag1', 1)
     // wx.clearStorageSync()
     // const flag = wx.getStorageSync('flag')
-
+    
     this.setData({
       postList
     })
+    console.log(postList)
   },
 
   /**

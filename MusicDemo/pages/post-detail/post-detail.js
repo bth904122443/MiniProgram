@@ -29,6 +29,7 @@ Page({
    */
   onLoad: function (options) {
     // 取出当前文章数据
+    console.log(options)
     const postData = postList[options.pid]
     // 取出当前文章id
     this.data._pid = options.pid

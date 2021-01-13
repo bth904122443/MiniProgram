@@ -6,6 +6,8 @@ Page({
    */
   data: {
     inTheaters:[],
+    comingSoon:[],
+    top250:[]
   },
 
   /**
@@ -16,9 +18,27 @@ Page({
     wx.request({
       url: 'http://t.talelin.com/v2/movie/in_theaters?count=3&start=0',
       success(res){
-        console.log(res)
+        console.log(res.data)
         that.setData({
           inTheaters:res.data.subjects
+        })
+      }
+    }),
+    wx.request({
+      url: 'http://t.talelin.com/v2/movie/coming_soon?count=3&start=0',
+      success(res){
+        console.log(res.data)
+        that.setData({
+          comingSoon:res.data.subjects
+        })
+      }
+    }),
+    wx.request({
+      url: 'http://t.talelin.com/v2/movie/top250?count=3&start=0',
+      success(res){
+        console.log(res.data)
+        that.setData({
+          top250:res.data.subjects
         })
       }
     })
