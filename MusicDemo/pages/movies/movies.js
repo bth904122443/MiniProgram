@@ -1,4 +1,6 @@
 // pages/movies/movies.js
+const app = getApp()
+
 Page({
 
   /**
@@ -13,30 +15,42 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  onGotoMore(event){
+    // console.log(event)
+    const type = event.currentTarget.dataset.type
+    wx.navigateTo({
+      url: '/pages/more-movie/more-movie?type=' + type,
+    })
+  },
+
   onLoad: function (options) {
     const that = this
     wx.request({
-      url: 'http://t.talelin.com/v2/movie/in_theaters?count=3&start=0',
+      url: app.gBaseUrl + 'in_theaters?count=3&start=0',
+      // data:{
+      //   start:0,
+      //   count:3
+      // },
       success(res){
-        console.log(res.data)
+        // console.log(res.data)
         that.setData({
           inTheaters:res.data.subjects
         })
       }
     }),
     wx.request({
-      url: 'http://t.talelin.com/v2/movie/coming_soon?count=3&start=0',
+      url: app.gBaseUrl + 'coming_soon?count=3&start=0',
       success(res){
-        console.log(res.data)
+        // console.log(res.data)
         that.setData({
           comingSoon:res.data.subjects
         })
       }
     }),
     wx.request({
-      url: 'http://t.talelin.com/v2/movie/top250?count=3&start=0',
+      url: app.gBaseUrl + 'top250?count=3&start=0',
       success(res){
-        console.log(res.data)
+        // console.log(res.data)
         that.setData({
           top250:res.data.subjects
         })

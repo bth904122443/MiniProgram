@@ -1,5 +1,5 @@
-// pages/posts/posts.js
-import {postList} from '../../data/data.js'
+// pages/more-movies/more-movie.js
+const app = getApp()
 
 Page({
 
@@ -7,33 +7,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    postList : {},
+    movies:[]
   },
-  // 列表跳转首页
-  onGoToDetail(event){
-    console.log(event);
-    // console.log(event.currentTarget.dataset.postId)
-    const pid = event.currentTarget.dataset.postId
-    wx.navigateTo({
-      url: '/pages/post-detail/post-detail?pid=' + pid,
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    // wx.setStorageSync('flag', true)
-    // wx.setStorageSync('flag', false)
-    // wx.removeStorageSync('flag')
-    // wx.setStorageSync('flag1', 1)
-    // wx.clearStorageSync()
-    // const flag = wx.getStorageSync('flag')
-    
-    this.setData({
-      postList
+    // console.log(options)
+    const type = options.type
+    // console.log(type)
+    const that = this
+    wx.request({
+      // url: app.gBaseUrl + 'coming_soon?count=20&start=0',
+      url: app.gBaseUrl + type,
+      data:{
+        start:0,
+        count:20
+      },
+      success(res){
+        // console.log(res.data)
+        that.setData({
+          movies:res.data.subjects
+        })
+      }
     })
-    // console.log(postList)
   },
 
   /**
