@@ -22,6 +22,18 @@ Page({
       url: '/pages/more-movie/more-movie?type=' + type,
     })
   },
+  onConfirm(event){
+    // console.log(event)
+    wx.request({
+      url: app.gBaseUrl + 'search',
+      data:{
+        q:event.detail.value
+      },
+      success:(res)=>{
+        
+      }
+    })
+  },
 
   onLoad: function (options) {
     const that = this

@@ -1,6 +1,11 @@
 page{
-  background-color: #f2f2f2;
+  /* background-color:teal; */
+  background-color:#f2f2f2;
 }
+.ex-search-bar{
+  height: 88rpx !important;
+}
+
 .movie-list{
   margin-bottom: 30rpx;
 }
