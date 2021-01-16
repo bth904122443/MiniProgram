@@ -9,12 +9,18 @@ Page({
   data: {
     inTheaters:[],
     comingSoon:[],
-    top250:[]
+    top250:[],
+    searchResult:false,
+    searchData:[]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  // 监听用户点击搜索框取消事件
+  onCancel(){
+    this.setData({
+      searchResult:false,
+    })
+  },
+  
   onGotoMore(event){
     // console.log(event)
     const type = event.currentTarget.dataset.type
@@ -23,18 +29,28 @@ Page({
     })
   },
   onConfirm(event){
+    const searchData = []
     // console.log(event)
+    this.setData({
+      searchResult:true
+    })
     wx.request({
       url: app.gBaseUrl + 'search',
       data:{
         q:event.detail.value
       },
       success:(res)=>{
-        
+        // console.log(res)
+        this.setData({
+          searchData:res.data.subjects
+        })
+        // console.log(searchData)
       }
     })
   },
-
+/**
+   * 生命周期函数--监听页面加载
+   */
   onLoad: function (options) {
     const that = this
     wx.request({

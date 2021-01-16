@@ -36,5 +36,8 @@
         "selectedIconPath": "images/tab/movie@highlight.png"
       }
     ]
+  },
+  "usingComponents": {
+    "movie":"/components/movie/index"
   }
 }
