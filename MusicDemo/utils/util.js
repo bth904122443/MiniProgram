@@ -14,6 +14,17 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-module.exports = {
-  formatTime: formatTime
+function convertToCastString(casts){
+  var castsjoin = "";
+  for (var idx in casts){
+    castsjoin = castsjoin + casts[idx].name + " / "
+  }
+  return castsjoin.substring(0,castsjoin.length - 2);
 }
+
+module.exports = {
+  formatTime,
+  convertToCastString,
+}
+
+
