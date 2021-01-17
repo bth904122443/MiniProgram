@@ -1,7 +1,6 @@
-<view class="container">
-  <view wx:if="{{movie.images.large}}">
-    <image class="poster" src="{{movie.images.large}}"></image>
-  </view>
+<view bind:tap="onGoToDetail" class="container">
+  <image class="poster" src="{{movie.images.large}}" bindtap="bindTap"/>
+  <!-- <image class="poster" src="{{movie.images.large}}"/> -->
   <text class="title">{{movie.title}}</text>
   <view class="rate-container">
     <l-rate disabled="{{true}}" score="{{movie.rating.average/2}}" size="22" count="5"/>

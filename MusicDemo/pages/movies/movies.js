@@ -11,7 +11,7 @@ Page({
     comingSoon:[],
     top250:[],
     searchResult:false,
-    searchData:[]
+    searchData:[],
   },
 
   // 监听用户点击搜索框取消事件
@@ -90,7 +90,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**

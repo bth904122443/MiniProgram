@@ -5,6 +5,10 @@
   justify-content: space-around;
   padding: 40rpx 30rpx;
 }
+.container::after{
+  content: "";
+  width: 400rpx;
+}
 .movie{
   margin-bottom: 30rpx;
 }
