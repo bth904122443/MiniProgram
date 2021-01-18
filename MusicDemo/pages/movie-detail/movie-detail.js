@@ -1,6 +1,6 @@
 // pages/movie-detail/movie-detail.js
 const app = getApp()
-import {convertToCastString} from '../../utils/util.js'
+import {convertToCastString,convertToCastInfos} from '../../utils/util.js'
 
 Page({
 
@@ -28,6 +28,11 @@ Page({
     data.wishCount = movie.wish_count
     data.commentsCount = movie.comments_count
     data.rating = movie.rating.stars/10
+    data.average = movie.rating.average
+    data.genres = movie.genres.join('、')
+    data.summary = movie.summary
+    data.castsInfo = convertToCastInfos(movie.casts)
+    // console.log(data.castsInfo)
     this.setData({
       movie:data
     })
@@ -36,16 +41,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
     const mid = options.mid
     wx.request({
       url: app.gBaseUrl + 'subject/' + mid,
       success:(res)=>{
         this.processMoiveData(res.data)
+        // console.log(res)
         // this.setData({
         //   movie:res.data
         // })
-        console.log(this.data.movie)
       }
     })
   },

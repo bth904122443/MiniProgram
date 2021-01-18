@@ -13,7 +13,7 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
-
+// 转换演员信息，从对象到字符串
 function convertToCastString(casts){
   var castsjoin = "";
   for (var idx in casts){
@@ -22,9 +22,23 @@ function convertToCastString(casts){
   return castsjoin.substring(0,castsjoin.length - 2);
 }
 
+// 转换演员信息，从对象到数组
+function convertToCastInfos(casts){
+  var castsArray = [];
+  for (var idx in casts){
+    var cast = {
+      img : casts[idx].avatars ? casts[idx].avatars.large : '',
+      name : casts[idx].name
+    }
+    castsArray.push(cast)
+  }
+  return castsArray
+}
+
 module.exports = {
   formatTime,
   convertToCastString,
+  convertToCastInfos
 }
 
 
