@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/posts/posts"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#b3d4db",
+    "navigationBarTitleText": "豆瓣评分",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

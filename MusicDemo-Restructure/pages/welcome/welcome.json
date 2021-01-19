@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "lin-button":"/miniprogram_npm/lin-ui/button/index"
+  }
+}

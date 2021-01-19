@@ -55,6 +55,7 @@
   color: #777777;
 }
 .origin-title{
+  width: 500rpx;
   color: #1f3463;
   font-size: 24rpx;
   font-weight: bold;
