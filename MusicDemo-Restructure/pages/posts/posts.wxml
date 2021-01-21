@@ -1,6 +1,6 @@
 <view class="container">
   <!-- 轮播图 -->
-  <swiper class="swiper">
+  <swiper indicator-dots="{{true}}" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#b3d4db" class="swiper">
     <swiper-item>
       <image class="banner" src="/images/banner/banner1.jpg"></image>
     </swiper-item>
@@ -13,35 +13,7 @@
   </swiper>
 
   <!-- 文章列表 -->
-  <view class="post-container">
-    <view class="author-container">
-      <image src="/images/avatar/avatar-1.png"></image>
-      <text>2021年1月20日</text>
-    </view>
-    <text class="post-title">理解第一性原则</text>
-    <image class="post-image" src="/images/banner/banner1.jpg"></image>
-    <text class="content-container">文字区域文字区域文字区域文字区域文字区域</text>
-    <view class="rate-container">
-      <lin-icon name="favor"/>
-      <text>92</text>
-      <lin-icon name="eye"/>
-      <text>102</text>
-    </view>
-  </view>
-  <!-- 第二篇文章 -->
-  <view class="post-container">
-    <view class="author-container">
-      <image src="/images/avatar/avatar-1.png"></image>
-      <text>2021年1月20日</text>
-    </view>
-    <text class="post-title">理解第一性原则</text>
-    <image class="post-image" src="/images/banner/banner1.jpg"></image>
-    <text class="content-container">文字区域文字区域文字区域文字区域文字区域</text>
-    <view class="rate-container">
-      <lin-icon name="favor"/>
-      <text>92</text>
-      <lin-icon name="eye"/>
-      <text>102</text>
-    </view>
-  </view>
+  <block wx:for="{{PostList}}" wx:key="index">
+    <post res="{{item}}" bind:tap="onTapToDetail"></post>
+  </block>
 </view>

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "lin-icon":"/miniprogram_npm/lin-ui/icon/index"
+    "lin-icon":"/miniprogram_npm/lin-ui/icon/index",
+    "post":"/components/post/post"
   }
 }

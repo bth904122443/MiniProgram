@@ -1,40 +1,28 @@
-// pages/posts/posts.js
-import {postList} from '../../data/data.js'
-
+import {PostList} from '../../data/data.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    postList : {},
+    postList:{}
   },
-  // 列表跳转首页
-  onGoToDetail(event){
-    // console.log(event.currentTarget.dataset.postId)
-    // console.log(event)
-    const pid = event.currentTarget.dataset.postId | event.detail.pid
-    console.log(pid)
-    wx.navigateTo({
-      url: '/pages/post-detail/post-detail?pid=' + pid,
-    })
-  },
+
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    // wx.setStorageSync('flag', true)
-    // wx.setStorageSync('flag', false)
-    // wx.removeStorageSync('flag')
-    // wx.setStorageSync('flag1', 1)
-    // wx.clearStorageSync()
-    // const flag = wx.getStorageSync('flag')
-    
+    console.log(options)
+    const postList = PostList[options.pid]
+    // const PostList = PostList[options.pid]
     this.setData({
       postList
     })
-    // console.log(postList)
+    // this.setData({
+    //   PostList:PostList
+    // })
+    // console.log(PostList)
   },
 
   /**

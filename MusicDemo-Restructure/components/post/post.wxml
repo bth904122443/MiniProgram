@@ -1,0 +1,15 @@
+<view class="post-container">
+    <view class="author-container">
+      <image src="{{res.avatar}}"></image>
+      <text>{{res.time}}</text>
+    </view>
+    <text class="post-title">{{res.title}}</text>
+    <image class="post-image" src="{{res.pic}}"></image>
+    <text class="content-container">{{res.content}}</text>
+    <view class="rate-container">
+      <lin-icon color="#666" name="favor"/>
+      <text>{{res.collect}}</text>
+      <lin-icon color="#666" name="eye"/>
+      <text>{{res.watch}}</text>
+    </view>
+</view>

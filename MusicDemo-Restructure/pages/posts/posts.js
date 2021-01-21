@@ -1,18 +1,30 @@
 // pages/posts/posts.js
+import {PostList} from '../../data/data.js'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    PostList:[]
+  },
 
+  onTapToDetail(event){
+    console.log(event)
+    const pid = event.currentTarget.dataset.postId
+    wx.navigateTo({
+      url: '/pages/post-detail/post-detail?pid=' + pid,
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      PostList
+    })
   },
 
   /**

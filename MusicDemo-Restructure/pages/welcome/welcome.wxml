@@ -5,5 +5,5 @@
   <text class="welcome-text">欢迎回来，老朋友</text>
   <!-- <view class="click-button">点击开启小程序之旅</view> -->
   <!-- 使用lin-ui重构开启按钮 -->
-  <lin-button class="click-button" size='medium' plain="{{true}}" bg-color='#b3d4db'>开启小程序之旅</lin-button>
+  <lin-button bind:tap="onGoToPosts" class="click-button" size='medium' plain="{{true}}" bg-color='#b3d4db'>开启小程序之旅</lin-button>
 </view>

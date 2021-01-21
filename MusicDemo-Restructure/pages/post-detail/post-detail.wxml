@@ -1,0 +1,32 @@
+<view class="container">
+  <!-- 顶部图片 -->
+  <image class="detail-pic" src="{{postList.pic}}"></image>
+  <!-- 作者信息栏 -->
+  <view class="author-container">
+      <image src="{{postList.avatar}}" class="author-avatar"></image>
+      <text class="author">{{postList.author}}</text>
+      <text class="publish">发表于</text>
+      <text class="time">{{postList.time}}</text>
+  </view>
+  <text class="detail-title">{{postList.title}}</text>
+  <!-- 功能栏 -->
+  <view class="function-bar">
+    <view class="button-bar">
+      <image class="favor" src="/images/icon/collection.png"></image>
+      <image class="share" src="/images/icon/share.png"></image>
+      <!-- LinUI图标效果太差 -->
+      <!-- <lin-icon l-class="favor" size="80" name="favor"></lin-icon>
+      <lin-icon l-class="share" size="80" name="share"></lin-icon> -->
+    </view>
+    <view class="line"></view>
+  </view>
+
+  <!-- 文本内容 -->
+  <text class="content">{{postList.content}}</text>
+  <view class="end">
+    <view class="text-block">
+      <text>---没有内容啦---</text>
+    </view>
+  </view>
+  
+</view>
