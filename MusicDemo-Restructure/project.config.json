@@ -6,7 +6,7 @@
   "setting": {
     "urlCheck": false,
     "es6": true,
-    "enhance": false,
+    "enhance": true,
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
@@ -68,6 +68,7 @@
         {
           "name": "pages/post-detail/post-detail",
           "pathName": "pages/post-detail/post-detail",
+          "query": "pid=1",
           "scene": null
         }
       ]

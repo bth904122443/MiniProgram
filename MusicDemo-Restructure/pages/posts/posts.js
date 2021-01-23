@@ -10,9 +10,18 @@ Page({
     PostList:[]
   },
 
-  onTapToDetail(event){
-    console.log(event)
+  
+  swiperTap(event){
+    // console.log(event)
     const pid = event.currentTarget.dataset.postId
+    wx.navigateTo({
+      url: '/pages/post-detail/post-detail?pid=' + pid,
+    })
+  },
+
+  onTapToDetail(event){
+    // console.log(event)
+    const pid = event.detail.pid
     wx.navigateTo({
       url: '/pages/post-detail/post-detail?pid=' + pid,
     })

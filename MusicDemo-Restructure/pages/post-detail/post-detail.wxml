@@ -12,7 +12,10 @@
   <!-- 功能栏 -->
   <view class="function-bar">
     <view class="button-bar">
-      <image class="favor" src="/images/icon/collection.png"></image>
+      <view bind:tap="onTapSetCollect">
+        <image wx:if="{{isCollected}}" class="favor" src="/images/icon/collection.png"></image>
+        <image wx:else class="favor" src="/images/icon/collection-anti.png"></image>
+      </view>
       <image class="share" src="/images/icon/share.png"></image>
       <!-- LinUI图标效果太差 -->
       <!-- <lin-icon l-class="favor" size="80" name="favor"></lin-icon>

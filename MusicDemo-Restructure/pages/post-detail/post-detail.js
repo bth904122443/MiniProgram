@@ -5,26 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    postList:{}
+    postList:{},
+    isCollected:false,
+    _pid:null,
   },
-
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
-    const postList = PostList[options.pid]
-    // const PostList = PostList[options.pid]
+    const pid = options.pid
     this.setData({
-      postList
+      postList:PostList[pid]
     })
-    // this.setData({
-    //   PostList:PostList
-    // })
-    // console.log(PostList)
   },
-
+ // 点击收藏
+  onTapSetCollect(){
+    const _isCollectrd = !this.data.isCollected
+    console.log(_isCollectrd)
+    this.setData({
+      // isCollected
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

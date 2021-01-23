@@ -2,18 +2,18 @@
   <!-- 轮播图 -->
   <swiper indicator-dots="{{true}}" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#b3d4db" class="swiper">
     <swiper-item>
-      <image class="banner" src="/images/banner/banner1.jpg"></image>
+      <image data-post-id='0' bind:tap="swiperTap" class="banner" src="/images/banner/banner1.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image class="banner" src="/images/banner/banner1.jpg"></image>
+      <image data-post-id='1' bind:tap="swiperTap" class="banner" src="/images/banner/banner1.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image class="banner" src="/images/banner/banner1.jpg"></image>
+      <image data-post-id='2' bind:tap="swiperTap" class="banner" src="/images/banner/banner1.jpg"></image>
     </swiper-item>
   </swiper>
 
   <!-- 文章列表 -->
   <block wx:for="{{PostList}}" wx:key="index">
-    <post res="{{item}}" bind:tap="onTapToDetail"></post>
+    <post res="{{item}}" bind:lintap="onTapToDetail"></post>
   </block>
 </view>
