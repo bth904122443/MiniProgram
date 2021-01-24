@@ -5,26 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-    postList:{},
+    postList:[],
     isCollected:false,
-    _pid:null,
+    pid:null,
+    _postCollect:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const pid = options.pid
+    this.data.pid = options.pid
+    const postCollect = wx.getStorageSync('postCollect')
+    this.data._postCollect = postCollect
     this.setData({
-      postList:PostList[pid]
+      postList:PostList[options.pid],
+      isCollected:postCollect[options.pid]
     })
   },
  // 点击收藏
   onTapSetCollect(){
-    const _isCollectrd = !this.data.isCollected
-    console.log(_isCollectrd)
+    const _postCollect = this.data._postCollect
+    const postsCollect = _postCollect
+    postsCollect[this.data.pid] = !this.data.isCollected
+    wx.setStorageSync('postCollect',postsCollect)
     this.setData({
-      // isCollected
+      isCollected:!this.data.isCollected
     })
   },
   /**
