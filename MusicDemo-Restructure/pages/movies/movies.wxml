@@ -1,0 +1,4 @@
+<lin-search-bar l-container-class="search-bar"></lin-search-bar>
+<movie-list></movie-list>
+<movie-list></movie-list>
+<movie-list></movie-list>

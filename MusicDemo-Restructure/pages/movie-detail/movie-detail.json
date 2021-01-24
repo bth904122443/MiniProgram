@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "lin-rate":"/miniprogram_npm/lin-ui/rate/index"
+  }
+}

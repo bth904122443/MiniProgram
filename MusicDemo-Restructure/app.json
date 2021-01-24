@@ -3,7 +3,9 @@
     "pages/welcome/welcome",
     "pages/posts/posts",
     "pages/post-detail/post-detail",
-    "components/post/post"
+    "components/post/post",
+    "pages/movies/movies",
+    "pages/movie-detail/movie-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,5 +14,23 @@
     "navigationBarTextStyle": "white"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#333333",
+    "list": [
+      {
+        "pagePath": "pages/posts/posts",
+        "text": "文章",
+        "iconPath": "images/tabbar/post.png",
+        "selectedIconPath": "images/tabbar/post@highlight.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "images/tabbar/movie.png",
+        "selectedIconPath": "images/tabbar/movie@highlight.png"
+      }
+    ]
+  }
 }

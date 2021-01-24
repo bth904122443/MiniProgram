@@ -1,0 +1,5 @@
+<view class="movie-container">
+  <image class="movie-pic" src="https://bkimg.cdn.bcebos.com/pic/c75c10385343fbf2b5a5dd10be7eca8065388f73?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg"></image>
+  <text class="movie-title">后来的我们</text>
+  <lin-rate score="3" size="24"></lin-rate>
+</view>

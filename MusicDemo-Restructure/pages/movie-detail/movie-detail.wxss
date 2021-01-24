@@ -1,0 +1,132 @@
+.bottom-pic{
+  width: 100%;
+  height: 380rpx;
+  filter: blur(10px);
+  position: absolute;
+  top: 0;
+  z-index: -99; 
+}
+.moive-introduction{
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+  height: 320rpx;
+  display: flex;
+  flex-direction: column;
+}
+.movie-title{
+  color: white;
+  font-weight: bold;
+  font-size: 38rpx;
+}
+.movie-country{
+  margin-top: 18rpx;
+  font-size:30rpx;
+  color: white;
+}
+.favor-commit{
+  margin-top: 16rpx;
+  display: flex;
+  flex-direction: row;
+}
+.movie-number{
+  margin-right: 10rpx;
+  color: red;
+  font-size: 24rpx;
+}
+.movie-favor{
+  margin-right: 10rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+.movie-commit{
+  color: #999999;
+  font-size: 24rpx;
+}
+/* 右侧图片 */
+.right-pic{
+  position: absolute;
+  top: 180rpx;
+  right: 50rpx;
+  width:180rpx;
+  height: 260rpx;
+}
+
+/* 影人信息 */
+.Actor-container{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.actor-box{
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  display: flex;
+  margin-top: 10rpx;
+  flex-direction: row;
+  align-items: baseline;
+}
+.row text{
+  margin-right: 20rpx;
+  font-size: 26rpx;
+  color: #999999;
+}
+.rate-number{
+  font-size: 26rpx;
+  color: #999999;
+  margin-left: 10rpx;
+}
+
+/* 分割线 */
+.line{
+  margin-top: 40rpx;
+  width: 100%;
+  height: 1px;
+  background-color: #dadada;
+}
+
+/* 剧情简介样式 */
+.plot-container{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.plot-title{
+  font-size: 26rpx;
+  color: #999999;
+}
+.plot-content{
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #706f6f;
+}
+
+/* 影人照片区域样式 */
+.actor-pic-container{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+}
+.actor-pic-title{
+  color: #999999;
+  font-size: 26rpx;
+}
+.actor-pic{
+  width: 180rpx;
+  height: 240rpx;
+}
+.col{
+  margin-top: 20rpx;
+  margin-right: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row{
+  padding-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+}

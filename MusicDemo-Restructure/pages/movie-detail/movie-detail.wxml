@@ -1,0 +1,76 @@
+<image class="bottom-pic" src="/images/banner/banner1.jpg"></image>
+<view class="moive-introduction">
+  <text class="movie-title">幕后玩家</text>
+  <text class="movie-country">中国大陆 · 2018</text>
+  <view class="favor-commit">
+    <text class="movie-number">11432</text>
+    <text class="movie-favor">人喜欢</text>
+    <text class="movie-number">540</text>
+    <text class="movie-commit">条评论</text>
+  </view>
+  <image class="right-pic" src="/images/banner/banner1.jpg"></image>
+</view>
+
+<!-- 影人信息 -->
+<view class="Actor-container">
+  <view class="actor-box">
+    <view class="row">
+      <text>评分</text>
+      <lin-rate score="3" size="24"></lin-rate>
+      <text class="rate-number">3</text>
+    </view>
+    <view class="row">
+      <text>导演</text>
+      <text>任鹏远</text>
+    </view>
+    <view class="row">
+      <text>影人</text>
+      <text>任鹏远 / 徐峥 / 王立坤</text>
+    </view>
+    <view class="row">
+      <text>类型</text>
+      <text>剧情、悬疑、犯罪</text>
+    </view>
+  </view>
+</view>
+
+<!-- 分割线 -->
+<view class="line"></view>
+
+<!-- 剧情简介 -->
+<view class="plot-container">
+  <text class="plot-title">剧情简介</text>
+  <text class="plot-content">坐拥数亿财产的钟小年（徐峥 饰）意外遭人绑架，不得不在一位神秘人的操控下完成一道道令人两难的选择题。在选择的过程中，钟小年落入陷阱，不仅巨额财产被盗取，濒临身败名裂的边缘，还将妻子魏思蒙（王丽坤 饰）牵扯进一个个险境。为了洗脱罪名，救回爱人，钟小年在危机重重中与神秘人展开了一场关乎生死和救赎的金钱游戏···</text>
+</view>
+
+<!-- 分割线 -->
+<view class="line"></view>
+
+<!-- 影人照片 -->
+<view class="actor-pic-container">
+  <text class="actor-pic-title">影人</text>
+  <scroll-view scroll-x="{{true}}">
+    <view class="row">
+      <view class="col">
+        <image class="actor-pic" src="/images/banner/banner1.jpg"></image>
+        <text>任鹏远</text>
+      </view>
+      <view class="col">
+        <image class="actor-pic" src="/images/banner/banner1.jpg"></image>
+        <text>任鹏远</text>
+      </view>
+      <view class="col">
+        <image class="actor-pic" src="/images/banner/banner1.jpg"></image>
+        <text>任鹏远</text>
+      </view>
+      <view class="col">
+        <image class="actor-pic" src="/images/banner/banner1.jpg"></image>
+        <text>任鹏远</text>
+      </view>
+      <view class="col">
+        <image class="actor-pic" src="/images/banner/banner1.jpg"></image>
+        <text>任鹏远</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

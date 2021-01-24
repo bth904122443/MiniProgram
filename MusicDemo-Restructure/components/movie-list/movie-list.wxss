@@ -1,0 +1,46 @@
+.top-container{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container-title{
+  font-size: 28rpx;
+  color: #707070;
+}
+.more-url{
+  font-size: 28rpx;
+  color: #b3d4db;
+}
+.movies-container{
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+/* 三个电影外部flex */
+.movie-list{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+/* 单个电影模块的样式 */
+.movie-container{
+  margin-top: 20rpx;
+  /* margin-left: 30rpx; */
+  display: flex;
+  flex-direction: column;
+}
+.movie-pic{
+  width: 180rpx;
+  height: 270rpx;
+}
+.movie-title{
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #707070;
+}

@@ -1,0 +1,12 @@
+<view class="movies-container">
+  <!-- 正在热映区域 -->
+  <view class="top-container">
+    <text class="container-title">正在热映</text>
+    <text class="more-url">更多 ></text>
+  </view>
+  <view class="movie-list">
+    <movie></movie>
+    <movie></movie>
+    <movie></movie>
+  </view>
+</view>

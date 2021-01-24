@@ -17,7 +17,19 @@ Page({
   onLoad: function (options) {
     this.data.pid = options.pid
     const postCollect = wx.getStorageSync('postCollect')
-    this.data._postCollect = postCollect
+    // 判断缓存是否存在
+    if(postCollect){
+      this.data._postCollect = postCollect
+    }
+    
+    let collected = postCollect[this.data.pid]
+    console.log(collected)
+    if(collected === undefined){
+      // 如果undefined 说明文章从来没有被收藏过
+      collected = false
+      console.log(collected)
+    }
+
     this.setData({
       postList:PostList[options.pid],
       isCollected:postCollect[options.pid]
@@ -25,9 +37,10 @@ Page({
   },
  // 点击收藏
   onTapSetCollect(){
-    const _postCollect = this.data._postCollect
+    const _postCollect = this.data._postCollect  //_postCollect 是一个js对象 {1:true,2:false}
     const postsCollect = _postCollect
-    postsCollect[this.data.pid] = !this.data.isCollected
+    console.log(typeof postsCollect)  //postsCollect打印结果是string
+    // console.log(!this.data.isCollected)
     wx.setStorageSync('postCollect',postsCollect)
     this.setData({
       isCollected:!this.data.isCollected
