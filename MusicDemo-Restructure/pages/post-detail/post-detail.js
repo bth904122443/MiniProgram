@@ -1,50 +1,77 @@
 import {PostList} from '../../data/data.js'
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    // 页面数据
     postList:[],
+    // 控制收藏状态
     isCollected:false,
-    pid:null,
-    _postCollect:null
+    _pid:null,
+    // 音乐是否播放
+    isPlaying:false,
+    _mgr:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.data.pid = options.pid
-    const postCollect = wx.getStorageSync('postCollect')
-    // 判断缓存是否存在
-    if(postCollect){
-      this.data._postCollect = postCollect
-    }
-    
-    let collected = postCollect[this.data.pid]
-    console.log(collected)
-    if(collected === undefined){
-      // 如果undefined 说明文章从来没有被收藏过
-      collected = false
-      console.log(collected)
-    }
-
+    this.data._pid = options.pid
+    const mgr = wx.getBackgroundAudioManager()
+    this.data._mgr = mgr
+    mgr.onPlay(this.onMusicPlay)
+    mgr.onPause(this.onMusicPause)
+    // console.log(this.currentMusicIsPlay())
     this.setData({
       postList:PostList[options.pid],
-      isCollected:postCollect[options.pid]
+      isPlaying:this.currentMusicIsPlay()
     })
   },
  // 点击收藏
   onTapSetCollect(){
-    const _postCollect = this.data._postCollect  //_postCollect 是一个js对象 {1:true,2:false}
-    const postsCollect = _postCollect
-    console.log(typeof postsCollect)  //postsCollect打印结果是string
-    // console.log(!this.data.isCollected)
-    wx.setStorageSync('postCollect',postsCollect)
+    const postCollect = {}
+    const isCollected = this.data.isCollected
+    postCollect[this.data._pid] = isCollected
+    wx.setStorageSync('postCollect', postCollect)  //缓存格式 pid:true或者pid:false
     this.setData({
       isCollected:!this.data.isCollected
     })
+  },
+  // 点击
+  onMusicPlay(){
+    const _mgr = this.data._mgr
+    _mgr.src = PostList[0].music.url
+    _mgr.title = PostList[0].music.title
+    _mgr.coverImgUrl = PostList[0].music.coverImg
+    // 计入全局播放状态
+    app.globalData.isPlaying = !this.data.isPlaying
+    app.globalData.postId = this.data._pid
+    // console.log(app.globalData.isPlaying)
+    // console.log(app.globalData.postId)
+    this.setData({
+      isPlaying:true
+    })
+  },
+  onMusicPause(){
+    const _mgr = this.data._mgr
+    _mgr.pause()
+    app.globalData.isPlaying = this.data.isPlaying
+    app.globalData.postId = -1
+    this.setData({
+      isPlaying:false
+    })
+  },
+  currentMusicIsPlay(){
+    if(app.globalData.isPlaying && app.globalData.postId === this.data._pid){
+      return true
+    }
+    else{
+      return false
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

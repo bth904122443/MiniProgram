@@ -1,6 +1,8 @@
 <view class="container">
   <!-- 顶部图片 -->
   <image class="detail-pic" src="{{postList.pic}}"></image>
+  <image class="button-play" wx:if="{{!isPlaying}}" bind:tap="onMusicPlay" src="/images/music/music-start.png"></image>
+  <image class="button-play" wx:else bind:tap="onMusicPause" src="/images/music/music-stop.png"></image>
   <!-- 作者信息栏 -->
   <view class="author-container">
       <image src="{{postList.avatar}}" class="author-avatar"></image>

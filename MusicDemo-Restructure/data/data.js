@@ -8,18 +8,28 @@ var PostList=[
     content:"第一性原理由亚里士多德提出，他强调：'任何一个系统都有自己的第一性原理，它是一个根基性的命题或假设。它不能被缺省，也不能被违反.'",
     collect:92,
     watch:102,
-    postId:0
+    postId:0,
+    music:{
+      "title":"炉心溶解",
+      "url":"http://music.163.com/song/media/outer/url?id=33525798.mp3",
+      "coverImg":"https://dss1.bdstatic.com/6OF1bjeh1BF3odCf/it/u=90393995,4164122953&fm=74&app=80&f=JPEG&size=f121,121?sec=1880279984&t=907c4882cce2f4f71de03c20fa80d3a2"
+    }
   },
   {
     pic:"/images/banner/banner1.jpg",
     avatar:"/images/avatar/avatar-1.png",
     author:"Charon",
     time:'24小时前',
-    title:"理解第二性原则",
-    content:"第一性原理由亚里士多德提出，他强调：'任何一个系统都有自己的第一性原理，它是一个根基性的命题或假设。它不能被缺省，也不能被违反.'",
+    title:"投资是一条长期主义之路",
+    content:"每次危机出现，都为我们提供一次难得的压力测试和投资复盘的机会，而最终是价值观决定了你将如何应对和自处。在这样的特殊时期里，我们依然坚守长期主义，就是因为我们既看到了当下，关注企业短期的利润、现金流，努力做足准备以拜托短期的困境，挺过'眼前的苟且'，又相信未来，对于创造价值的事情从不怀疑，坚持追求长期结构性投资机会，找到价值的'诗和远方'",
     collect:92,
     watch:102,
-    postId:1
+    postId:1,
+    music:{
+      "title":"炉心溶解",
+      "url":"http://music.163.com/song/media/outer/url?id=33525798.mp3",
+      "coverImg":"https://dss1.bdstatic.com/6OF1bjeh1BF3odCf/it/u=90393995,4164122953&fm=74&app=80&f=JPEG&size=f121,121?sec=1880279984&t=907c4882cce2f4f71de03c20fa80d3a2"
+    }
   },
   {
     pic:"/images/banner/banner1.jpg",
@@ -30,7 +40,12 @@ var PostList=[
     content:"第一性原理由亚里士多德提出，他强调：'任何一个系统都有自己的第一性原理，它是一个根基性的命题或假设。它不能被缺省，也不能被违反.'",
     collect:92,
     watch:102,
-    postId:2
+    postId:2,
+    music:{
+      "title":"炉心溶解",
+      "url":"http://music.163.com/song/media/outer/url?id=33525798.mp3",
+      "coverImg":"https://dss1.bdstatic.com/6OF1bjeh1BF3odCf/it/u=90393995,4164122953&fm=74&app=80&f=JPEG&size=f121,121?sec=1880279984&t=907c4882cce2f4f71de03c20fa80d3a2"
+    }
   }
 ]
 export {PostList}

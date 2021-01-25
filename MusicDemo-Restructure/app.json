@@ -32,5 +32,6 @@
         "selectedIconPath": "images/tabbar/movie@highlight.png"
       }
     ]
-  }
+  },
+  "requiredBackgroundModes": ["audio"]
 }
