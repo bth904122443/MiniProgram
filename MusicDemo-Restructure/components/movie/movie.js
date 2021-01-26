@@ -26,7 +26,7 @@ Component({
     //   })
     // }
     errorFunction(event){
-      console.log(event)
+      // console.log(event)
       this.setData({
         img:'/images/banner/banner1.jpg'
       })

@@ -8,7 +8,8 @@ Page({
     inTheaters:[],
     comingSoon:[],
     top250:[],
-    isSearch:false
+    isSearch:false,
+    searchResult:[]
   },
 
   /**
@@ -45,6 +46,17 @@ Page({
     })
   },
   onTapSearch(event){
+    console.log(event)
+    const result = event.detail.value
+    wx.request({  //根据搜索结果请求接口
+      url: 'http://t.talelin.com/v2/movie/search?' + result,
+      success:(res)=>{
+        // console.log(res.data.subjects)
+        this.setData({
+          searchResult:res.data.subjects
+        })
+      }
+    })
     this.setData({
       isSearch:true
     })

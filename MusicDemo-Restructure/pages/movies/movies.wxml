@@ -6,7 +6,7 @@
 </view>
 <!-- 搜索结果页面 -->
 <view class="searchResult">
-  <block>
-    <movie movieList></movie>
+  <block wx:for="{{searchResult}}">
+    <movie movieList="{{item}}" img="{{item.images.large}}"></movie>
   </block>
 </view>

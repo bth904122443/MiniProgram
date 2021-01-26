@@ -53,3 +53,10 @@ page{
 }
 
 /* 搜索结果页面 */
+.searchResult{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30rpx;
+  justify-content: space-between;
+}

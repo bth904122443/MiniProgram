@@ -6,7 +6,7 @@
   width: 200rpx;
 }
 .movie-pic{
-  width: 180rpx;
+  width: 200rpx;
   height: 270rpx;
 }
 .movie-title{
