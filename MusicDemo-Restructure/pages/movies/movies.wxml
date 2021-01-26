@@ -1,4 +1,12 @@
-<lin-search-bar l-container-class="search-bar"></lin-search-bar>
-<movie-list></movie-list>
-<movie-list></movie-list>
-<movie-list></movie-list>
+<lin-search-bar bind:linconfirm="onTapSearch" bind:lincancel="onTapBack" l-container-class="search-bar"></lin-search-bar>
+<view wx:if="{{!isSearch}}">
+  <movie-list movieLists="{{inTheaters}}"></movie-list>
+  <movie-list movieLists="{{comingSoon}}"></movie-list>
+  <movie-list movieLists="{{top250}}"></movie-list>
+</view>
+<!-- 搜索结果页面 -->
+<view class="searchResult">
+  <block>
+    <movie movieList></movie>
+  </block>
+</view>

@@ -4,8 +4,8 @@
     <text class="more-url">更多 ></text>
   </view>
   <view class="movie-list">
-    <movie></movie>
-    <movie></movie>
-    <movie></movie>
+    <block wx:for="{{movieLists}}">
+      <movie movieList="{{item}}" img="{{item.images.large}}"></movie>
+    </block>
   </view>
 </view>

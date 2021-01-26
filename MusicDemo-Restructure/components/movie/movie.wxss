@@ -3,6 +3,7 @@
   /* margin-left: 30rpx; */
   display: flex;
   flex-direction: column;
+  width: 200rpx;
 }
 .movie-pic{
   width: 180rpx;
@@ -12,4 +13,8 @@
   margin-top: 10rpx;
   font-size: 26rpx;
   color: #707070;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
 }

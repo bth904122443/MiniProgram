@@ -5,16 +5,55 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    inTheaters:[],
+    comingSoon:[],
+    top250:[],
+    isSearch:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'http://t.talelin.com/v2/movie/in_theaters?start=0&count=3',
+      success:(res)=>{
+        // console.log(res.data.subjects)
+        this.setData({
+          inTheaters:res.data.subjects
+        })
+      }
+    })
+    wx.request({
+      url: 'http://t.talelin.com/v2/movie/coming_soon?start=0&count=3',
+      success:(res)=>{
+        this.setData({
+          comingSoon:res.data.subjects
+        })
+      },
+      fail:(e)=>{
+        console.log(e)
+      }
+    })
+    wx.request({
+      url: 'http://t.talelin.com/v2/movie/top250?start=0&count=3',
+      success:(res)=>{
+        this.setData({
+          top250:res.data.subjects
+        })
+      }
+    })
   },
-
+  onTapSearch(event){
+    this.setData({
+      isSearch:true
+    })
+  },
+  onTapBack(event){
+    this.setData({
+      isSearch:false
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
