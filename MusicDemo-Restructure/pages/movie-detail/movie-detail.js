@@ -5,14 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    movieList:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // console.log(options)
+    const mid = options.mid
+    wx.request({
+      url: 'http://t.talelin.com/v2/movie/subject/'+ mid,
+      success:(res)=>{
+        console.log(res)
+        this.setData({
+          movieList:res.data
+        })
+      }
+    })
   },
 
   /**

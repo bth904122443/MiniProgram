@@ -5,7 +5,7 @@
   </view>
   <view class="movie-list">
     <block wx:for="{{movieLists}}">
-      <movie movieList="{{item}}" img="{{item.images.large}}"></movie>
+      <movie data-movie-id="{{item.id}}" bind:lintap="onTap" movieList="{{item}}" img="{{item.images.large}}"></movie>
     </block>
   </view>
 </view>

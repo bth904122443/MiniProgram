@@ -25,6 +25,17 @@ Component({
     //     pid
     //   })
     // }
+    onTap(event){
+      // console.log(event.currentTarget.dataset.movieId)
+      const mid = event.currentTarget.dataset.movieId
+      // console.log(mid)
+      // wx.navigateTo({
+      //   url: '/pages/post-detail/post-detail?pid=' + pid,
+      // })
+      this.triggerEvent('lintap',{
+        mid
+      })
+    },
     errorFunction(event){
       // console.log(event)
       this.setData({

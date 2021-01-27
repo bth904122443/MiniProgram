@@ -1,4 +1,4 @@
-<view class="movie-container" bind:tap="onTap">
+<view class="movie-container" data-movie-id="{{movieList.id}}" bind:tap="onTap">
   <image bind:error="errorFunction" class="movie-pic" src="{{img}}"></image>
   <text class="movie-title">{{movieList.title}}</text>
   <lin-rate score="3" size="24"></lin-rate>

@@ -9,7 +9,7 @@ Page({
     comingSoon:[],
     top250:[],
     isSearch:false,
-    searchResult:[]
+    searchResult:[],
   },
 
   /**
@@ -64,6 +64,20 @@ Page({
   onTapBack(event){
     this.setData({
       isSearch:false
+    })
+  },
+  onTapToDetail(event){
+    console.log(event)
+    const mid = event.detail
+    wx.navigateTo({
+      url: '/pages/movie-detail/movie-detail?mid=' + mid,
+    })
+  },
+  onSearchToDetail(event){
+    console.log(event)
+    const mid = event.detail.mid
+    wx.navigateTo({
+      url: '/pages/movie-detail/movie-detail?mid=' + mid,
     })
   },
   /**

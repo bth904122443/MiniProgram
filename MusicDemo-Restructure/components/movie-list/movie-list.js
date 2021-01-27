@@ -18,6 +18,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    onTap(event){
+      // console.log(event.target.dataset.movieId)
+      const mid = event.target.dataset.movieId
+      this.triggerEvent("lintap",mid)
+    }
   }
 })
