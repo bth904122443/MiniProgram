@@ -1,4 +1,6 @@
 // pages/movie-detail/movie-detail.js
+import{convertToCastString,convertToCastAvatar} from "../../utils/utils.js"
+
 Page({
 
   /**
@@ -18,13 +20,32 @@ Page({
       url: 'http://t.talelin.com/v2/movie/subject/'+ mid,
       success:(res)=>{
         console.log(res)
-        this.setData({
-          movieList:res.data
-        })
+        this.processMovieData(res.data)
+        // this.setData({
+        //   movieList:res.data
+        // })
       }
     })
   },
-
+  processMovieData(movieList){
+    // console.log(movieList)
+    const data = {}
+    data.directors = convertToCastString(movieList.directors)
+    data.casts = convertToCastString(movieList.casts)
+    data.image = movieList.images.large
+    data.title = movieList.title
+    data.subtitle = movieList.countries + ' · ' + movieList.year
+    data.wishCount = movieList.wish_count
+    data.reviewsCount = movieList.reviews_count
+    data.rate = movieList.rating.stars/10
+    data.genres = movieList.genres.join('、')
+    data.summary = movieList.summary
+    data.castAvatar = convertToCastAvatar(movieList.casts)
+    console.log(data.castAvatar)
+    this.setData({
+      movieList:data
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

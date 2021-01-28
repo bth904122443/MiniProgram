@@ -46,7 +46,7 @@ Page({
     })
   },
   onTapSearch(event){
-    console.log(event)
+    // console.log(event)
     const result = event.detail.value
     wx.request({  //根据搜索结果请求接口
       url: 'http://t.talelin.com/v2/movie/search?' + result,
@@ -67,14 +67,14 @@ Page({
     })
   },
   onTapToDetail(event){
-    console.log(event)
+    // console.log(event)
     const mid = event.detail
     wx.navigateTo({
       url: '/pages/movie-detail/movie-detail?mid=' + mid,
     })
   },
   onSearchToDetail(event){
-    console.log(event)
+    // console.log(event)
     const mid = event.detail.mid
     wx.navigateTo({
       url: '/pages/movie-detail/movie-detail?mid=' + mid,

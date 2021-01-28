@@ -1,14 +1,14 @@
-<image class="bottom-pic" src="{{movieList.images.large}}"></image>
+<image class="bottom-pic" src="{{movieList.image}}"></image>
 <view class="moive-introduction">
   <text class="movie-title">{{movieList.title}}</text>
-  <text class="movie-country">{{movieList.countries}} · {{movieList.year}}</text>
+  <text class="movie-country">{{movieList.subtitle}}</text>
   <view class="favor-commit">
-    <text class="movie-number">{{movieList.wish_count}}</text>
+    <text class="movie-number">{{movieList.wishCount}}</text>
     <text class="movie-favor">人喜欢</text>
-    <text class="movie-number">{{movieList.reviews_count}}</text>
+    <text class="movie-number">{{movieList.reviewsCount}}</text>
     <text class="movie-commit">条评论</text>
   </view>
-  <image class="right-pic" src="{{movieList.images.large}}"></image>
+  <image class="right-pic" src="{{movieList.image}}"></image>
 </view>
 
 <!-- 影人信息 -->
@@ -16,20 +16,20 @@
   <view class="actor-box">
     <view class="row">
       <text>评分</text>
-      <lin-rate score="{{movieList.rating.stars/10}}" size="24"></lin-rate>
-      <text class="rate-number">{{movieList.rating.stars/10}}</text>
+      <lin-rate score="{{movieList.rate}}" size="24"></lin-rate>
+      <text class="rate-number">{{movieList.rate}}</text>
     </view>
     <view class="row">
       <text>导演</text>
-      <text>{{movieList.directors[0].name}}</text>
+      <text>{{movieList.directors}}</text>
     </view>
     <view class="row">
       <text>影人</text>
-      <text>{{movieList.casts[0].name}} / {{movieList.casts[1].name}} / {{movieList.casts[2].name}}</text>
+      <text>{{movieList.casts}}</text>
     </view>
     <view class="row">
       <text>类型</text>
-      <text>{{movieList.genres[0]}} 、 {{movieList.genres[1]}} 、 {{movieList.genres[2]}}</text>
+      <text>{{movieList.genres}}</text>
     </view>
   </view>
 </view>
@@ -47,14 +47,14 @@
 <view class="line"></view>
 
 <!-- 影人照片 -->
-<view class="actor-pic-container">
-  <text class="actor-pic-title">影人</text>
-  <scroll-view scroll-x="{{true}}">
-    <view class="row">
-      <view class="col">
-        <image class="actor-pic" src="{{movieList.casts[0].avatars.large}}"></image>
-        <text>{{movieList.casts[0].name}}</text>
+<view class="casts">
+  <text class="cast-font"> 影人</text>
+  <scroll-view  enable-flex scroll-x class="casts-container">
+    <block wx:for="{{movieList.castAvatar}}" wx:key="index">
+      <view class="cast-container">
+          <image class="cast-img" src="{{item.img}}"></image>
+          <text>{{item.name}}</text>
       </view>
-    </view>
+    </block>
   </scroll-view>
 </view>
