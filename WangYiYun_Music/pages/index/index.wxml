@@ -1,0 +1,5 @@
+<view class="container">
+  <image class="img_avatar" src="/images/avatar/avatar.jpg"></image>
+  <text class="nickname">{{msg}}</text>
+  <button open-type="getUserInfo" bind:tap="onTapToLog" class="content">获取用户信息</button>
+</view> 

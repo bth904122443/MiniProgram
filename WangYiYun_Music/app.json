@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#b3d4db",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "Demo"
+  },
+  "sitemapLocation": "sitemap.json"
+}

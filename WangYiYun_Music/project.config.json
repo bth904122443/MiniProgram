@@ -40,53 +40,32 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.14.0",
+  "libVersion": "2.14.3",
   "appid": "wx6e885a9f4cafcb41",
-  "projectname": "MusicDemo-Restructure",
+  "projectname": "WangYiYun_Music",
   "debugOptions": {
     "hidedInDevtools": []
   },
   "scripts": {},
   "isGameTourist": false,
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
   "condition": {
-    "plugin": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
       "list": []
     },
     "game": {
+      "list": []
+    },
+    "plugin": {
       "list": []
     },
     "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "name": "pages/posts/posts",
-          "pathName": "pages/posts/posts",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/post-detail/post-detail",
-          "pathName": "pages/post-detail/post-detail",
-          "query": "pid=1",
-          "scene": null
-        },
-        {
-          "name": "pages/movies/movies",
-          "pathName": "pages/movies/movies",
-          "query": "pid=1",
-          "scene": null
-        },
-        {
-          "name": "pages/movie-detail/movie-detail",
-          "pathName": "pages/movie-detail/movie-detail",
-          "query": "pid=1",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }
