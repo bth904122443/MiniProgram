@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    msg:"Charon",
-
+    nickName:"",
+    avatarUrl:""
   },
 
   /**
@@ -15,10 +15,11 @@ Page({
   onLoad: function (options) {
 
   },
-
-  onTapToLog(){
-    wx.navigateTo({
-      url: '/pages/logs/logs',
+  handleGetUserInfo(res){
+    console.log(res);
+    this.setData({
+      nickName : res.detail.userInfo.nickName,
+      avatarUrl : res.detail.userInfo.avatarUrl
     })
   },
   /**

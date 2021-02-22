@@ -1,5 +1,10 @@
 <view class="container">
-  <image class="img_avatar" src="/images/avatar/avatar.jpg"></image>
-  <text class="nickname">{{msg}}</text>
-  <button open-type="getUserInfo" bind:tap="onTapToLog" class="content">获取用户信息</button>
-</view> 
+  <swiper interval="3000" circular vertical="{{false}}" indicator-dots="{{true}}" autoplay="{{true}}">
+    <swiper-item>
+      <image src="../../images/avatar/avatar.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/avatar/avatar.jpg"></image>
+    </swiper-item>
+  </swiper>
+</view>

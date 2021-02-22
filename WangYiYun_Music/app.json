@@ -4,9 +4,9 @@
     "pages/logs/logs"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#b3d4db",
+    "navigationBarBackgroundColor": "#d43c33",
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "Demo"
+    "navigationBarTitleText": "网易云音乐"
   },
   "sitemapLocation": "sitemap.json"
 }
