@@ -1,4 +1,6 @@
 // pages/index/index.js
+import request from "../../utils/request.js";
+
 Page({
 
   /**
@@ -13,7 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    request("http://localhost:3000/banner",{type:2})
   },
   handleGetUserInfo(res){
     console.log(res);
