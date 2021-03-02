@@ -1,5 +1,8 @@
 {
   "usingComponents": {},
   "navigationBarBackgroundColor":"#d43c33",
-  "navigationBarTitleText":"网易云音乐"
+  "navigationBarTitleText":"网易云音乐",
+  "usingComponents":{
+    "NavHeader":"/components/NavHeader/index"
+  }
 }

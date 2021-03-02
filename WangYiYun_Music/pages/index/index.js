@@ -8,14 +8,23 @@ Page({
    */
   data: {
     nickName:"",
-    avatarUrl:""
+    avatarUrl:"",
+    bannerList:[], //轮播图数据
+    recommendList:[] //推荐歌单数据
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    request("http://localhost:3000/banner",{type:2})
+  onLoad: async function (options) {
+    let result = await request("/banner",{type:2});
+    let recommendList = await request("/personalized",{limit:6});
+    console.log("结果数据：",result);
+    console.log("推荐歌单数据：",recommendList);
+    this.setData({
+      bannerList:result.banners,
+      recommendList:recommendList.result
+    })
   },
   handleGetUserInfo(res){
     console.log(res);

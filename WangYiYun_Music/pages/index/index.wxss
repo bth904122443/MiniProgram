@@ -35,7 +35,9 @@ page{
 }
 /* 推荐歌曲样式 */
 .recommendContainer{
-  padding:20rpx;
+  padding-top:20rpx;
+  padding-left:20rpx;
+  padding-right:20rpx;
 }
 .recommendContainer .header .title{
   font-size: 32rpx;
@@ -53,12 +55,14 @@ page{
 
 /* scroll-view滚动模块 */
 .recommendScroll{
+  height: 240rpx;
   display: flex;
   flex-direction: row;
   margin-top: 40rpx;
 }
 .scrollItem{
   width: 200rpx;
+  height: 300rpx;
   margin-right: 20rpx;
 }
 .scrollItem image{
@@ -79,4 +83,11 @@ page{
   display: -webkit-box;
   -webkit-box-orient: vertical;  /*设置对齐模式*/
   /*-webkit-line-clamp: 2; */ /*设置多行的行数*/
+}
+
+/* 热歌风向标 */
+.topList{
+  padding-top:20rpx;
+  padding-left:20rpx;
+  padding-right:20rpx;
 }
