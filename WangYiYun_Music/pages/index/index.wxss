@@ -85,9 +85,45 @@ page{
   /*-webkit-line-clamp: 2; */ /*设置多行的行数*/
 }
 
-/* 热歌风向标 */
+/* 排行榜 */
+.topListSwiper{
+  height: 460rpx;
+  margin-top: 20rpx;
+}
 .topList{
   padding-top:20rpx;
   padding-left:20rpx;
   padding-right:20rpx;
+}
+.swiperItem{
+  width: 96%;
+}
+.swiperItem .title{
+  font-size: 30rpx;
+  line-height: 80rpx;
+  margin-bottom: 20rpx;
+}
+.musicItem{
+  /* 当一个元素设置为flex，其子元素会自动称为block元素 */
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.musicItem image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 6rpx;
+}
+.musicItem .count{
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.musicItem .musicName{
+  height: 100rpx;
+  line-height: 100rpx;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
